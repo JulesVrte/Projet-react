@@ -49,23 +49,33 @@
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
   gap: 24px;
-  background: rgba(255, 96, 96, 1);
-
+  z-index: 2;
   width: 340px;
   height: 340px;
   border-radius:10px ;
 }
 
 .title-card {
+  position: absolute;
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
   margin: 0 0 24px 24px;
   color: #FFFFFF
+}
+
+.image-card {
+  position: absolute;
+  max-width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .gallery {

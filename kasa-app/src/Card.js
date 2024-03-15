@@ -1,8 +1,8 @@
-const Card = () => {
+const Card = ({logement}) => {
     return ( 
         <div className="card">
-            {/* <img src={} alt="banner" /> */}
-            <h1 className='title-card'>Titre de la <br/>location</h1>
+            <img className='image-card' src={logement.cover} alt="banner" />
+            <h1 className='title-card'>{logement.title}</h1>
         </div>
      );
 }

@@ -1,5 +1,6 @@
 import bannerHomepage from './banner-homepage.png'
 import Card from './Card'
+import logements from './logement.json';
 
 const Homepage = () => {
     return ( 
@@ -14,14 +15,9 @@ const Homepage = () => {
             </div>
 
             <div className="gallery">
-
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-
+                {logements.map((element) => 
+                    <Card logement={element} key={element.id} />
+                )}
             </div>
 
         </div>
