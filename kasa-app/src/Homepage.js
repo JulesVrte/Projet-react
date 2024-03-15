@@ -1,4 +1,5 @@
-import bannerHomepage from './banner-homepage.png';
+import bannerHomepage from './banner-homepage.png'
+import Card from './Card'
 
 const Homepage = () => {
     return ( 
@@ -13,7 +14,14 @@ const Homepage = () => {
             </div>
 
             <div className="gallery">
-                
+
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+
             </div>
 
         </div>
