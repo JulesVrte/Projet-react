@@ -10,8 +10,8 @@ function App() {
         <Navbar />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/property/:id" element={<Property />}  />
+            <Route path="/" element={ <Homepage /> } />
+            <Route path="/property/:id" element={ <Property /> }  />
           </Routes>
         </div>
       </div>
