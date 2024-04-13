@@ -11,8 +11,9 @@ const BoxInput = ({title, value}) => {
         
         const arrow = document.querySelector(`.${title}-arrow-drop-down`);
         
-        value.style.opacity = isOpen ? 1 : 0;
-        arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        value.style.display = isOpen ? "block" : "none";
+        arrow.style.transition = 'transform 0.5s';
+        arrow.style.transform = isOpen ? 'rotate(-180deg)' : 'rotate(0deg)';
     }
         
     const toggleDropDown = () => {
@@ -21,12 +22,15 @@ const BoxInput = ({title, value}) => {
     }
 
     return (
+        <div className='box-input-container'>
 
-        <div className='box-input' onClick={toggleDropDown}>
+            <div className='box-input' onClick={toggleDropDown}>
 
-            <h2 className='title'>{title}</h2>
+                <h2 className='title'>{title}</h2>
 
-            <img className={`${title}-arrow-drop-down`} src={arrowSvg} alt="arrow-drop-down" />
+                <img className={`${title}-arrow-drop-down`} src={arrowSvg} alt="arrow-drop-down" />
+
+            </div>
 
             <div className={`text ${title}`}>{value}</div>
 
