@@ -1,4 +1,4 @@
-import bannerHomepage from './banner-homepage.png'
+import bannerHomepage from './img/banner-homepage.png'
 import Card from './Card'
 import logements from './logement.json';
 
