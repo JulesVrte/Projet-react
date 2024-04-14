@@ -1,25 +1,26 @@
-
+import React, {useState} from 'react';
 
 const PropertySlider = ({propertyPictures}) => {
+
+    const [currentSlide, setCurrentSlide] = useState(0);
     
     const pictureNumbers = propertyPictures.length;
 
-    let currentSlide = 0;
 
     function previousSlide() {
         const container = document.querySelector('.container');
 
         if (currentSlide === 0) {
             container.style.transform = `translate(${(pictureNumbers-1)*-93}vw)`
-            currentSlide = pictureNumbers - 1;
+            setCurrentSlide(pictureNumbers- 1 );  
         }
         
         else if(currentSlide > 0) {
-            currentSlide--;
+            setCurrentSlide(currentSlide- 1);
             container.style.transform = `translate(${currentSlide*-93}vw)`;
             
         } else {
-            currentSlide = pictureNumbers - 1;
+            setCurrentSlide(pictureNumbers- 1);
             container.style.transform = `translate(${currentSlide*93}vw)`
         }
 
@@ -29,9 +30,9 @@ const PropertySlider = ({propertyPictures}) => {
         const container = document.querySelector('.container');
 
         if(currentSlide < pictureNumbers-1) {
-            currentSlide++;
+            setCurrentSlide(currentSlide + 1);
         } else {
-            currentSlide = 0;
+            setCurrentSlide(0);
             container.style.transform = `translate(0vw)`
             return
         }

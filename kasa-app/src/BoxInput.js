@@ -1,24 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import arrowSvg from './img/arrow.svg';
 
 const BoxInput = ({title, value}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    
-    function openCloseDropDown(){
-        const value = document.querySelector('.' + title);
-        
+    useEffect(() => {
+            
+        const text = document.querySelector('.' + title);
+            
         const arrow = document.querySelector(`.${title}-arrow-drop-down`);
-        
-        value.style.display = isOpen ? "block" : "none";
+
+        text.style.display = isOpen ? "block" : "none";
+
         arrow.style.transition = 'transform 0.5s';
+
         arrow.style.transform = isOpen ? 'rotate(-180deg)' : 'rotate(0deg)';
-    }
-        
+    
+    }, [isOpen]);
+
     const toggleDropDown = () => {
         setIsOpen(!isOpen);
-        openCloseDropDown();
     }
 
     return (
