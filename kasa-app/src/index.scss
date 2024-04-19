@@ -17,10 +17,12 @@
   
   a {
     text-decoration: none;
+
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
-
-
 
 .banner {
   margin: 0px 96px 48px;
@@ -87,6 +89,43 @@
       object-fit: cover;
       border-radius: 10px;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+    }
+  }
+}
+
+.box-input-container{  
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  .box-input {
+    position: relative;
+    display: flex;
+    background: #FF6060;
+    margin: 15px 0 0 0;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 5px;
+    
+    .title {
+      color: white;
+      font-size: 18pt;
+      font-weight: 700;
+    }
+  }
+
+  .text {
+    display: none;
+    transition: background-color .2s ease-in-out;
+    top: 54px;
+    background: #F6F6F673;
+    padding: 10px;
+    left: 0;
+
+    ul {  
+      list-style: none;
+      transition: background-color .2s ease-in-out;
+      padding: 0;
+      margin: 0;
     }
   }
 }
@@ -219,46 +258,11 @@
       width: 100%;
       justify-content: space-between;
       
-      .box-input-container{  
-        display: flex;
-        flex-direction: column;
-        width: 40%;
-        .box-input {
-          position: relative;
-          display: flex;
-          background: #FF6060;
-          margin: 15px 0 0 0;
-          justify-content: space-between;
-          padding: 8px 10px;
-          border-radius: 5px;
-          
-          .title {
-            color: white;
-            font-size: 18pt;
-            font-weight: 700;
-          }
-        }
-
-        .text {
-          display: none;
-          transition: background-color .2s ease-in-out;
-          top: 54px;
-          background: #F6F6F673;
-          padding: 10px;
-          left: 0;
-
-          ul {  
-            list-style: none;
-            transition: background-color .2s ease-in-out;
-            padding: 0;
-            margin: 0;
-          }
-        }
-      }
     }
   }
 }
 
+  
 .footer {
   background: #000000;
   display: flex;
@@ -279,7 +283,32 @@
   
   }
 }
+
+
+.about {
+  height: 72.2vh;
   
+  .banner {
+    img {
+      -webkit-filter: brightness(80%);
+    }
+  }
+
+  .about-content {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .box-input-container {
+      width: 80%;
+    }
+  }
+}
   
   
   
