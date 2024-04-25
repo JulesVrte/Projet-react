@@ -17,7 +17,7 @@ const BoxInput = ({title, value}) => {
 
         arrow.style.transform = isOpen ? 'rotate(-180deg)' : 'rotate(0deg)';
     
-    }, [isOpen]);
+    }, [isOpen, title]);
 
     const toggleDropDown = () => {
         setIsOpen(!isOpen);
