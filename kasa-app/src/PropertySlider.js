@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 const PropertySlider = ({propertyPictures}) => {
 
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(1);
     
     const pictureNumbers = propertyPictures.length;
 
@@ -32,7 +32,7 @@ const PropertySlider = ({propertyPictures}) => {
         if(currentSlide < pictureNumbers-1) {
             setCurrentSlide(currentSlide + 1);
         } else {
-            setCurrentSlide(0);
+            setCurrentSlide(1);
             container.style.transform = `translate(0vw)`
             return
         }

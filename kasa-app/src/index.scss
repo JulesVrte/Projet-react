@@ -95,9 +95,11 @@
 
 .box-input-container{  
   display: flex;
-  flex-direction: column;
-  width: 40%;
+  flex-wrap: wrap;
+  width: 80%;
+
   .box-input {
+    width: 100%;
     position: relative;
     display: flex;
     background: #FF6060;
@@ -105,6 +107,7 @@
     justify-content: space-between;
     padding: 8px 10px;
     border-radius: 5px;
+    align-items: center;
     
     .title {
       color: white;
@@ -114,12 +117,12 @@
   }
 
   .text {
-    display: none;
-    transition: background-color .2s ease-in-out;
+    width: 100%;
     top: 54px;
+    animation: growDown 0.2s ease-in-out forwards;
+    transform-origin: top center;
     background: #F6F6F673;
     padding: 10px;
-    left: 0;
 
     ul {  
       list-style: none;
@@ -128,8 +131,31 @@
       margin: 0;
     }
   }
+
+  .text-transition-off {
+    
+    animation: growUp 0.2s ease-in-out forwards;
+    transform-origin: top center;
+  }
+
+  @keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+  }
+  @keyframes growUp {
+    0% {
+        transform: scaleY(1)
+    }
+    100% {
+        transform: scaleY(0);
+        height: 0;
+    }
+  }
 }
-  
 
 .property{
   margin: 0px 96px 48px;
@@ -257,7 +283,10 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
-      
+
+      .box-input-container {
+        width: 45%;
+      }
     }
   }
 }
@@ -284,7 +313,7 @@
 }
 
 .about {
-  height: 72.2vh;
+  min-height: 72.2vh;
   
   .banner {
     img {
@@ -293,7 +322,6 @@
   }
 
   .about-content {
-
     width: 100%;
     display: flex;
     justify-content: center;
@@ -304,6 +332,80 @@
 
     .box-input-container {
       width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navbar {
+    padding: 15px;
+
+      .logo {
+        width: 145px;
+      }
+
+      .links {
+        font-size: 9pt;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+  }
+
+  .banner {
+    margin: 10px 19px 20px;
+    height: 111px;
+    border-radius: 10px;
+    width: 90vw;
+    box-shadow: none;
+
+    img {
+      border-radius: 10px;
+    }
+
+    .title {
+      font-size: 18pt;
+      font-weight: 700;
+      -webkit-text-stroke-width: 0;
+      bottom: 54%;
+      left: 35%;
+      width: 60%;
+      text-align: left;
+    }
+  }
+
+  .gallery {
+    background: none;
+    margin: 10px 0 20px;
+    padding: 0;
+    gap: 20px;
+
+    .card {
+      width: 90vw;
+      height: 68vw;
+    }
+  }
+
+  .property {
+    margin: 0px 19px 48px;
+    .property-slider {
+      
+      .container {
+        
+        .slides {
+          width: 93vw;
+          height: 68vw;
+        }
+      }
+    }
+  }
+
+  .about {
+
+    .about-content {
+
+      .box-input-container {
+        width: 90%;
+      }
     }
   }
 }

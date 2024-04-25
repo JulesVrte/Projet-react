@@ -11,7 +11,7 @@ const BoxInput = ({title, value}) => {
             
         const arrow = document.querySelector(`.${title}-arrow-drop-down`);
 
-        text.style.display = isOpen ? "block" : "none";
+        isOpen ? text.classList.remove('text-transition-off') : text.classList.add('text-transition-off')
 
         arrow.style.transition = 'transform 0.5s';
 
