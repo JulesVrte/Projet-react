@@ -100,6 +100,7 @@
 
   .box-input {
     width: 100%;
+    height: 32px;
     position: relative;
     display: flex;
     background: #FF6060;
@@ -113,6 +114,10 @@
       color: white;
       font-size: 18pt;
       font-weight: 700;
+    }
+
+    .arrow-drop-down {
+      cursor: pointer;
     }
   }
 
@@ -210,6 +215,7 @@
   }
   
   .property-infos-container {
+    
     display: flex;
     align-content: space-between;
     margin-top: 30px;
@@ -217,6 +223,7 @@
       
     .property-infos {
       width: 50%;
+      order: 1;
 
       h2 {
         font-size: 27pt;
@@ -231,6 +238,7 @@
     }
 
     .host-infos {
+      order: 2;
       display: flex;
       width: 50%;
       justify-content: flex-end;
@@ -254,6 +262,7 @@
     }
   
     .property-tags {
+      order: 3;
       display: flex;
       width: 50%;
       gap: 10px;
@@ -270,6 +279,7 @@
     }
   
     .property-ratings {
+      order: 4;
       display: flex;
       width: 50%;
       gap: 10px;
@@ -280,6 +290,7 @@
     }
   
     .property-description-equipments {
+      order: 5;
       display: flex;
       width: 100%;
       justify-content: space-between;
@@ -394,6 +405,76 @@
         .slides {
           width: 93vw;
           height: 68vw;
+        }
+      }
+    }
+    .property-infos-container {
+      margin: 0;
+
+      .property-infos {
+        width: 100%;
+
+        h2 {
+          font-size: 14pt;
+        }
+
+        p {
+          font-size: 10.5pt;
+        }
+      }
+      .host-infos {
+        order: 4;
+        gap: 10px;
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
+        p {
+          width: 25%;
+          font-size: 9pt;
+          line-height: 17px;
+        
+        }
+      }
+  
+      .property-tags {
+        order: 2;
+        width: 100%;
+        margin-bottom: 10px;
+
+        .tags {
+          font-size: 7.5pt
+        }
+      }
+  
+      .property-ratings {
+        order: 3;
+        justify-content: flex-start;
+
+        img {
+          width: 18px;
+        }
+      }
+
+      .property-description-equipments {
+        flex-wrap: wrap;
+
+        .box-input-container {
+          width: 100%;
+
+          .box-input {
+            height: 14px;
+
+            h2 {
+              font-size: 9.75pt;
+            }
+
+            img {
+              width: 24px;
+            }
+          }
         }
       }
     }

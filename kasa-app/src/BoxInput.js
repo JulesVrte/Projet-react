@@ -30,7 +30,7 @@ const BoxInput = ({title, value}) => {
 
                 <h2 className='title'>{title}</h2>
 
-                <img className={`${title}-arrow-drop-down`} src={arrowSvg} alt="arrow-drop-down" />
+                <img className={`${title}-arrow-drop-down arrow-drop-down`} src={arrowSvg} alt="arrow-drop-down" />
 
             </div>
 
