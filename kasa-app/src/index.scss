@@ -31,6 +31,7 @@
   border-radius: 25px;
 
   img {
+    filter: brightness(40%);
     -webkit-filter: brightness(40%);
     object-fit: cover;
     width: 100%;
@@ -46,8 +47,6 @@
     color: white;
     text-align: center;
     font-size: 36pt;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
   }
 }
   
@@ -327,6 +326,7 @@
   
   .banner {
     img {
+      filter: brightness(80%);
       -webkit-filter: brightness(80%);
     }
   }
@@ -507,7 +507,7 @@
   }
 
   .about {
-
+    min-height: 71.2vh;
     .about-content {
 
       .box-input-container {
@@ -517,7 +517,7 @@
   }
 
   .error404 {
-  
+    min-height: 72vh;
     h1 {
       font-size: 72pt;
       font-weight: 700;
