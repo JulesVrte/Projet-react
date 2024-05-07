@@ -42,6 +42,7 @@ const PropertySlider = ({propertyPictures}) => {
 
     return ( 
         <div className="property-slider">
+            
             <div className='container'>
                 {propertyPictures.map((slideImage, index) => (
                     
