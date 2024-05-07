@@ -1,9 +1,9 @@
-import Navbar from './Navbar';
-import Homepage from './Homepage';
-import Property from './Property';
-import Footer from './Footer';
-import About from './About';
-import Error404 from './Error404';
+import Navbar from './components/Navbar';
+import Homepage from './pages/Homepage';
+import Property from './pages/Property';
+import Footer from './components/Footer';
+import About from './pages/About';
+import Error404 from './pages/Error404';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {

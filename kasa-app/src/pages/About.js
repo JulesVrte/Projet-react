@@ -1,6 +1,6 @@
-import Banner from "./Banner";
-import BoxInput from "./BoxInput";
-import bannerAbout from './img/banner-about.jpg';
+import Banner from "../components/Banner";
+import BoxInput from "../components/BoxInput";
+import bannerAbout from '../img/banner-about.jpg';
 const About = () => {
     const aboutList = [
         {

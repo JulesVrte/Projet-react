@@ -1,4 +1,3 @@
-
 import BoxInput from './BoxInput';
 
 const PropertyInfos = ({property}) => {

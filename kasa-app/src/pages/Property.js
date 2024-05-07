@@ -1,7 +1,7 @@
 import { Navigate, useParams} from 'react-router-dom';
-import logements from './logement';
-import PropertySlider from './PropertySlider';
-import PropertyInfos from './PropertyInfos';
+import logements from '../logement';
+import PropertySlider from '../components/PropertySlider';
+import PropertyInfos from '../components/PropertyInfos';
 
 
 

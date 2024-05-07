@@ -1,7 +1,7 @@
-import bannerHomepage from './img/banner-homepage.png'
-import Card from './Card'
-import logements from './logement.json';
-import Banner from './Banner';
+import bannerHomepage from '../img/banner-homepage.png'
+import Card from '../components/Card'
+import logements from '../logement';
+import Banner from '../components/Banner';
 
 const Homepage = () => {
     return ( 
